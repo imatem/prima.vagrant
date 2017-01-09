@@ -12,15 +12,40 @@ Vagrant.configure("2") do |config|
     apt-get install -y git
     apt-get install -y php5-cli
   SHELL
-  config.vm.network "forwarded_port", guest: 80, host: 4567
+  config.vm.network "forwarded_port", guest: 8030, host: 4567
+  config.vm.network "forwarded_port", guest: 80, host: 4568
 
+  # sudo chown -R vagrant PRIMA/
+  # sudo git clone https://github.com/miguel-mx/PRIMA.git
   # https://getcomposer.org/download/
   # php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-  # php -r "if (hash_file('SHA384', 'composer-setup.php') === '61069fe8c6436a4468d0371454cf38a812e451a14ab1691543f25a9627b97ff96d8753d92a00654c21e2212a5ae1ff36') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+  # php -r "if (hash_file('SHA384', 'composer-setup.php') === '55d6ead61b29c7bdee5cccfb50076874187bd9f21f65d8991d46ec5cc90518f447387fb9f76ebae1fbbacf329e583e30') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
   # php composer-setup.php
   # php -r "unlink('composer-setup.php');"
   # Use it: php composer.phar
+
+  #./composer.phar install
   # /home/vagrant/PRIMA
+
+  # sudo service nginx stop
+  # apt-get install apache2
+
+  # /etc/apache2/
+
+  # apt-get install php5 php-pear libapache2-mod-php5
+
+  # a2enmod rewrite
+  # apache2ctl stop
+  # service apache2 restart
+
+
+  # <Directory "/var/www/PRIMA/web/">
+  #     AllowOverride All
+  #     Order allow,deny
+  #     Allow from All
+  # </Directory>
+
+  # /var/www/PRIMA/web
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
