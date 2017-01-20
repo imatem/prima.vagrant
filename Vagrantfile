@@ -9,7 +9,8 @@ Vagrant.configure("2") do |config|
   # end
   config.vm.provision "shell", path: "nginx.sh"
   config.vm.provision "shell", path: "prima.sh"
-  config.vm.network "forwarded_port", guest: 80, host: 4568
+  config.vm.network "forwarded_port", guest: 80, host: 8088
+  config.vm.network "forwarded_port", guest: 443, host: 8443
 
   # $ ls -l /var/run/php5-fpm.sock
   # grep 'user' /etc/nginx/nginx.conf
