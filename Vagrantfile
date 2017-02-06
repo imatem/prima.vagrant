@@ -20,4 +20,5 @@ Vagrant.configure("2") do |config|
   # <<< listen.owner = nginx
   # <<< listen.group = nginx
   # service php5-fpm restart
+  # chown www-data /usr/share/nginx/html/PRIMA
 end
