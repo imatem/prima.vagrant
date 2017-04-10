@@ -15,10 +15,10 @@ Vagrant.configure("2") do |config|
   # $ ls -l /var/run/php5-fpm.sock
   # grep 'user' /etc/nginx/nginx.conf
   # nano -w /etc/php5/fpm/pool.d/www.conf
-  # >>> listen.owner = www-data
-  # >>> listen.group = www-data
-  # <<< listen.owner = nginx
-  # <<< listen.group = nginx
+  # <<< listen.owner = www-data
+  # <<< listen.group = www-data
+  # >>> listen.owner = nginx
+  # >>> listen.group = nginx
   # service php5-fpm restart
   # chown www-data /usr/share/nginx/html/PRIMA
 end
